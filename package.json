@@ -5,7 +5,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "server": "nodemon app.js",
-    "dev": "concurrently npm run client && npm run server"
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "dependencies": {
     "concurrently": "^5.2.0",
