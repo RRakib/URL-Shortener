@@ -1,3 +1,4 @@
+let { nanoid } = require('nanoid');
 let express = require('express');
 let router = express.Router();
 
@@ -10,9 +11,13 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.post('/url', function(req, res, next) {
-  const {url, alias} = req.body;
+  const {url} = req.body;
+  let alias = nanoid(5);
   urlHolder.push(url);
   aliasHolder.push(alias);
+  res.json({
+    url: "http://localhost:5000/" + alias
+  })
 });
 
 module.exports = router;

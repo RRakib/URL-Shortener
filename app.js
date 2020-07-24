@@ -4,7 +4,6 @@ let logger = require('morgan');
 let path = require('path');
 let cors = require('cors');
 let helmet = require('helmet');
-let yup = require('yup');
 let rootroute = require('./routes/index');
 
 let app = express();
